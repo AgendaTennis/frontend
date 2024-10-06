@@ -1,0 +1,69 @@
+.conteiner {
+    max-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+
+.secao-imagem {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.secao-imagem img {
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+}
+
+.secao-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:64px;
+}
+
+
+.secao-formulario .logo {
+    height: 38px;
+}
+
+.secao-formulario .logo img {
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+}
+
+.secao-formulario h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.secao-formulario form {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.secao-formulario form div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+@media (max-width:800px) {
+    .conteiner {
+        grid-template-columns: 1fr;    
+    }
+    .secao-imagem {
+        display: none;
+    }
+}
+

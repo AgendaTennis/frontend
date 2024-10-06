@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <title>AgendaTennis - Login</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="secao-imagem">
+            <img src="./assets/images/login-cover.png" alt="Quadra de tênis">
+        </div>
+        <div class="secao-formulario">
+            <div class="logo"><img src="./assets/images/logo-agenda-tennis.svg" alt="Logo AgendaTennis"></div>
+            <form>
+                <h2>Acesse sua conta</h2>
+                <div>
+                    <label for="email" class="label-padrao">E-mail</label>
+                    <input type="email" id="email" name="email" required class="input-padrao">    
+                </div>
+                <div>
+                <label for="password" class="label-padrao">Senha</label>
+                <input type="password" id="password" name="password" required class="input-padrao">
+                </div>
+                <ul class="error-list">
+                    <span class="message-error"></span>
+                </ul>
+                <button type="submit" class="btn">ENTRAR</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
