@@ -9,34 +9,39 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <title>AgendaTennis - Login</title>
 </head>
 
-<body>
+<body id="login">
     <div class="conteiner">
-        <div class="secao-imagem">
-            <img src="./assets/images/login-cover.png" alt="Quadra de tênis">
-        </div>
-        <div class="secao-formulario">
-            <div class="logo"><img src="./assets/images/logo-agenda-tennis.svg" alt="Logo AgendaTennis"></div>
-            <form>
-                <h2>Acesse sua conta</h2>
-                <div>
-                    <label for="email" class="label-padrao">E-mail</label>
-                    <input type="email" id="email" name="email" required class="input-padrao">    
+        <main>
+            <div class="logo"><img src="./assets/icons/logo.svg" alt="Logo AgendaTennis"></div>
+            <div class="form-container">
+                <div class="form-header">
+                    <h2 class="titulo-principal">Acesse sua conta</h2>
+                    <p class="texto-normal">Bem-vindo de volta! Por favor, insira seus dados.</p>
                 </div>
-                <div>
-                <label for="password" class="label-padrao">Senha</label>
-                <input type="password" id="password" name="password" required class="input-padrao">
-                </div>
-                <ul class="error-list">
-                    <span class="message-error"></span>
-                </ul>
-                <button type="submit" class="btn">ENTRAR</button>
-            </form>
-        </div>
+                <form class="form-conteudo">
+                    <div>
+                        <label for="email" class="label-padrao">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required class="input-padrao">    
+                    </div>
+                    <div>
+                    <label for="password" class="label-padrao">Senha</label>
+                    <input type="password" id="password" name="password" required placeholder="Digite sua senha" class="input-padrao">
+                    </div>
+                    <a class="esquece-senha" href="#">Esqueceu a senha?</a>
+                    <button type="submit" class="botao">ENTRAR</button>
+                </form>
+            </div>
+            <p class="texto-pequeno copy">AgendaTennis © 2024. Alguns direitos reservados.</p>
+        </main>
+        <aside>
+            <img src="./assets/images/cover-image.png" alt="Quadra de tênis">
+        </aside>
     </div>
+    <script src="./scripts/login.js"></script>
 </body>
 
 </html>
