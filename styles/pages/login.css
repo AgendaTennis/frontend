@@ -1,4 +1,4 @@
-#login .conteiner {
+#login {
     max-height: 100vh;
     height: 100%;
     width: 100%;
@@ -75,7 +75,7 @@ main .logo img {
 }
 
 @media (max-width: 800px) {
-    #login .conteiner {
+    #login {
         grid-template-columns: 1fr;    
     }
     aside {
