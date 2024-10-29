@@ -1,91 +1,113 @@
 #login {
-    max-height: 100vh;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
 }
 
-
-aside {
-    overflow: hidden;
-}
-
-aside img {
-    width: 100%;
-    height: 100%;   
-    object-fit: cover;
+.img-container {
+  width: 100%;
+  height: 100%;
+  background: center / cover no-repeat
+    url("../../assets/images/cover-image.png");
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 24px;
 }
 
-
 main .logo {
-    height: 38px;
+  height: 38px;
 }
 
 main .logo img {
-    width: 100%;
-    height: 100%;   
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .form-header h2 {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .form-conteudo {
-    max-width: 380px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
 }
 
 .form-conteudo div {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .esquece-senha {
-    color:var(--cor-primaria-marca);
-    font-weight: 600;
-    text-decoration: none;
-    text-align: right;
-    display: inline-block;
+  color: var(--cor-primaria-marca);
+  font-weight: 600;
+  text-decoration: none;
+  text-align: right;
+  display: inline-block;
+  transition: opacity 0.3s;
 }
 
+.esquece-senha:hover {
+  opacity: 0.8;
+}
 
 .copy {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 @media (max-width: 800px) {
-    #login {
-        grid-template-columns: 1fr;    
-    }
-    aside {
-        display: none;
-    }
+  #login {
+    grid-template-columns: 1fr;
+  }
+  main {
+    gap: 24px;
+    padding: 0;
+  }
+
+  .form-container {
+    gap: 32px;
+  }
+
+  .form-conteudo {
+    gap: 16px;
+  }
+  aside {
+    display: none;
+  }
 }
 
-@media (max-width: 400px) {
-    main {
-        gap:32px;
-    }
+@media (max-width: 500px) {
+  main {
+    gap: 24px;
+  }
 
+  main .logo {
+    height: 32px;
+  }
+
+  .form-container {
+    gap: 32px;
+  }
+
+  .form-conteudo {
+    gap: 16px;
+  }
 }
