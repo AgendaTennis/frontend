@@ -7,15 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/pages/cadastro.css">
     <title>AgendaTennis - Registrar usuário</title>
 </head>
 
 <body id="novo-usuario">
-    <div class="conteiner">
-         <header class="header-main">
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header-main">
             <nav>
                 <ul>
                     <li><a href="#"><img src="../assets/icons/logo.svg" alt="Logo AgendaTennis"></a></li>
@@ -24,7 +26,74 @@
                 </ul>
             </nav>
         </header>
-        <main></main>        
+
+        <!-- Conteúdo Principal -->
+        <main>
+            <section class="form-section">
+                <h1 class="titulo">Registrar novo usuário</h1>
+
+                <!-- Título Tipo de Usuário -->
+                <h2 class="subtitulo">Tipo de usuário</h2>
+                <div class="user-type">
+                    <label>
+                        <input type="radio" name="userType" value="Aluno" checked>
+                        <span>Aluno</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="userType" value="Professor">
+                        <span>Professor</span>
+                    </label>
+                    <label class="admin">
+                        <input type="radio" name="userType" value="Administrador">
+                        <span>Administrador</span>
+                    </label>
+                </div>
+
+                <!-- Título Informações Pessoais -->
+                <h2 class="subtitulo">Informações pessoais</h2>
+                <!-- Formulário de Cadastro -->
+                <form class="register-form">
+                    <div class="form-group">
+                        <div>
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" placeholder="Oliver">
+                        </div>
+                        <div>
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" id="sobrenome" placeholder="Tasty">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            <label for="sexo">Sexo</label>
+                            <input type="text" id="sexo" placeholder="Masculino">
+                        </div>
+                        <div>
+                            <label for="nascimento">Data de nascimento</label>
+                            <input type="date" id="nascimento" value="1970-01-01">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="oliver@acme.com">
+                        </div>
+                        <div>
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha" placeholder="oliver@acme.com">
+                        </div>
+                    </div>
+
+                    <!-- Botões de Ação -->
+                    <div class="form-actions">
+                        <button type="submit" class="botao salvar">Salvar</button>
+                        <button type="button" class="botao cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
     </div>
 </body>
 

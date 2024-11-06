@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <title>AgendaTennis - Cadastro</title>
+  </head>
+
+  <body>
+    <div id="login">
+      <main>
+        <div class="logo">
+          <img src="./assets/icons/logo.svg" alt="Logo AgendaTennis" />
+        </div>
+        <div class="form-container">
+          <div class="form-header">
+            <h2 class="titulo-principal">Crie sua conta</h2>
+            <p class="texto-normal">
+              Por favor, preencha os dados para criar sua conta.
+            </p>
+          </div>
+          <form class="form-conteudo">
+            <div>
+              <label for="name" class="label-padrao">Nome</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Digite seu nome completo"
+                required
+                class="input-padrao"
+              />
+            </div>
+            <div>
+              <label for="email" class="label-padrao">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+                class="input-padrao"
+              />
+            </div>
+            <div>
+              <label for="password" class="label-padrao">Senha</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Crie uma senha"
+                class="input-padrao"
+              />
+            </div>
+            <div>
+              <label for="confirm-password" class="label-padrao">Confirme sua senha</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+                placeholder="Confirme sua senha"
+                class="input-padrao"
+              />
+            </div>
+            <button type="submit" class="botao">CADASTRAR</button>
+          </form>
+        </div>
+        <p class="texto-pequeno copy">
+          AgendaTennis © 2024. Alguns direitos reservados.
+        </p>
+      </main>
+      <aside>
+        <div class="img-container">
+          <img src="./assets/images/background.jpg" alt="" />
+        </div>
+      </aside>
+    </div>
+    <script src="./scripts/signup.js"></script>
+  </body>
+</html>
