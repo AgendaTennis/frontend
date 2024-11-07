@@ -52,6 +52,14 @@ label {
   font-size: 24px;
 }
 
+.titulo-secundario {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+
 .texto-normal {
   color: var(--cor-texto);
   font-size: 16px;

@@ -1,6 +1,6 @@
 .botao {
   width: 100%;
-  padding: 14px;
+  padding: 8px;
   background-color: var(--cor-primaria-marca);
   color: #ffffff;
   border: none;
@@ -18,7 +18,7 @@
 .input-padrao {
   width: 100%;
   font-size: 14px;
-  padding: 14px;
+  padding: 8px;
   border: 1px solid #d0d5dd;
   border-radius: 4px;
 }
