@@ -15,10 +15,33 @@
   background-color: #cf6718;
 }
 
+.botao#adicionar {
+  width: 50%;
+  padding: 10px;
+  background-color: var(--cor-primaria-marca);
+  color: black;
+  border: 1px solid #d0d5dd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  background-color: #ffffff;
+  align-items: rigth;
+}
+
 .input-padrao {
   width: 100%;
   font-size: 14px;
-  padding: 8px;
+  padding: 10px;
+  border: 1px solid #d0d5dd;
+  border-radius: 4px;
+}
+
+.input-padrao#data {
+  width: 25%;
+  font-size: 14px;
+  padding: 10px;
   border: 1px solid #d0d5dd;
   border-radius: 4px;
 }
@@ -29,7 +52,6 @@
   font-size: 14px;
   display: block;
 }
-
 
 .header-main {
   height: 72px;
