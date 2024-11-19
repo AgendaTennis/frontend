@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/index.css" />
-    <title>AgendaTennis - Login</title>
-  </head>
 
-  <body>
-    <div id="login">
-      <main>
-        <div class="logo">
-          <img src="./assets/icons/logo.svg" alt="Logo AgendaTennis" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/index.css" />
+  <title>AgendaTennis - Login</title>
+</head>
+
+<body>
+  <div id="login">
+    <main>
+      <div class="logo">
+        <img src="./assets/icons/logo.svg" alt="Logo AgendaTennis" />
+      </div>
+      <div class="form-container">
+        <div class="form-header">
+          <h2 class="titulo-principal">Acesse sua conta</h2>
+          <p class="texto-normal">
+            Bem-vindo de volta! Por favor, insira seus dados.
+          </p>
         </div>
-        <div class="form-container">
-          <div class="form-header">
-            <h2 class="titulo-principal">Acesse sua conta</h2>
-            <p class="texto-normal">
-              Bem-vindo de volta! Por favor, insira seus dados.
-            </p>
+        <form class="form-conteudo" method="post">
+          <div>
+            <label for="email" class="label-padrao">E-mail</label>
+            <input type="email" id="email" autocomplete="username" name="email" placeholder="Digite seu e-mail" required
+              class="input-padrao" />
           </div>
-          <form class="form-conteudo">
-            <div>
-              <label for="email" class="label-padrao">E-mail</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Digite seu e-mail"
-                required
-                class="input-padrao"
-              />
-            </div>
-            <div>
-              <label for="password" class="label-padrao">Senha</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                required
-                placeholder="Digite sua senha"
-                class="input-padrao"
-              />
-            </div>
+          <div>
+            <label for="password" class="label-padrao">Senha</label>
+            <input type="password" autocomplete="current-password" id="password" name="password" required
+              placeholder="Digite sua senha" class="input-padrao" />
             <a class="esquece-senha texto-normal" href="#">Esqueceu a senha?</a>
+          </div>
+          <div>
+            <span class="loginError"></span>
             <button type="submit" class="botao">ENTRAR</button>
-          </form>
-        </div>
-        <p class="texto-pequeno copy">
-          AgendaTennis © 2024. Alguns direitos reservados.
-        </p>
-      </main>
-      <aside>
-        <div class="img-container"></div>
-      </aside>
-    </div>
-    <script src="./scripts/login.js"></script>
-  </body>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p class="texto-pequeno copy">
+        AgendaTennis © 2024. Alguns direitos reservados.
+      </p>
+    </footer>
+  </div>
+  <script src="./scripts/login.js"></script>
+</body>
+
 </html>

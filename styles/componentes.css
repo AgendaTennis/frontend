@@ -64,7 +64,7 @@
 .header-main nav ul {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 24px;
   align-items: center;
 }
 
@@ -76,6 +76,8 @@
   display: inline-block;
   text-decoration: none;
   transition: all 0.3s;
+  min-width: 100px;
+  text-align: center;
 }
 
 .header-main nav ul li a:hover,
