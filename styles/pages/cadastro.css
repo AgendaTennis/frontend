@@ -1,13 +1,3 @@
-/* 
-.container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-} */
-
-
-
 .user-type {
     display: flex;
     gap: 10px;

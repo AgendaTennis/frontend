@@ -1,6 +1,6 @@
 .botao {
   width: 100%;
-  padding: 8px;
+  padding: 4px 8px;
   background-color: var(--cor-primaria-marca);
   color: #ffffff;
   border: none;
@@ -9,6 +9,12 @@
   font-size: 14px;
   font-weight: bold;
   transition: background-color 0.3s;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 .botao:hover {
@@ -17,7 +23,7 @@
 
 .botao#adicionar {
   width: 50%;
-  padding: 10px;
+  padding: 4px 8px;
   background-color: var(--cor-primaria-marca);
   color: black;
   border: 1px solid #d0d5dd;
@@ -28,22 +34,25 @@
   transition: background-color 0.3s;
   background-color: #ffffff;
   align-items: rigth;
+  height: 38px;
 }
 
 .input-padrao {
   width: 100%;
   font-size: 14px;
-  padding: 10px;
+  padding: 4px 8px;
   border: 1px solid #d0d5dd;
   border-radius: 4px;
+  height: 38px;
 }
 
 .input-padrao#data {
   width: 25%;
   font-size: 14px;
-  padding: 10px;
+  padding: 4px 8px;
   border: 1px solid #d0d5dd;
   border-radius: 4px;
+  height: 38px;
 }
 
 .label-padrao {
@@ -51,14 +60,25 @@
   font-weight: 600;
   font-size: 14px;
   display: block;
+
 }
 
 .header-main {
-  height: 72px;
+  position: absolute;
+  top: 0;
   width: 100%;
   border-bottom: 1px solid #f2f4f7;
+  position: sticky;
+  z-index: 100;
+  background-color: var(--cor-backgroud);
+}
+
+.header-main nav {
+  height: 56px;
+  width: 100%;
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
 .header-main nav ul {
@@ -69,7 +89,7 @@
 }
 
 .header-main nav ul a {
-  padding: 12px 18px;
+  padding: 8px 18px;
   border-radius: 6px;
   color: #344054;
   font-weight: 600;

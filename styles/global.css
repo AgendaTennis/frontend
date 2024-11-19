@@ -4,11 +4,13 @@
 
   --cor-primaria-marca: #ff6b00;
   --cor-backgroud: #ffffff;
+  --cor-backgroud-hover: #f9f5ff;
 
-
+  --cor-borda-padrao: #D0D5DD;
   --cor-error: #f04438;
   --cor-titulo: #101828;
   --cor-texto: #475467;
+  --cor-text-secundario: #344054;
 }
 
 * {
@@ -43,10 +45,20 @@ label {
   font-weight: 400;
 }
 
+svg {
+  width: 18px;
+  height: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
 .conteiner {
   max-width: 1280px;
   padding-left: 32px;
   padding-right: 32px;
+  margin: 0 auto;
 }
 
 .titulo-principal {

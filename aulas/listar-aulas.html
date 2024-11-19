@@ -10,21 +10,481 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/pages/aulas.css">
     <title>AgendaTennis - Listar aulas</title>
 </head>
 
 <body id="listar-aulas">
+    <header class="header-main">
+        <nav class="conteiner">
+            <a href="#"><img src="../assets/icons/logo.svg" alt="Logo AgendaTennis"></a>
+            <ul>
+                <li><a href="../usuarios/listar-usuarios.html">Usuários</a></li>
+                <li><a href="./listar-aulas.html" class="ativo">Aulas</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="conteiner">
-        <header class="header-main">
-            <nav>
-                <ul>
-                    <li><a href="#"><img src="../assets/icons/logo.svg" alt="Logo AgendaTennis"></a></li>
-                    <li><a href="../usuarios/listar-usuarios.html">Usuários</a></li>
-                    <li><a href="./listar-aulas.html" class="ativo">Aulas</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main></main>        
+        <main>
+            <div class="descricao-pagina">
+                <h1 class="titulo-principal">Gerenciamento das Aulas</h1>
+                <p class="texto-normal">Gerenciamento e visualização das aulas agendadas</p>
+            </div>
+            <div class="acoes-usuarios">
+                <div class="acoes-usuarios-filtros">
+                    <div class="buscar-aulas-input">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-search">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.3-4.3" />
+                        </svg>
+                        <input type="search" name="" id="" placeholder="Pesquisar aluno">
+                    </div>
+                    <button class="filtros botao">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-list-filter">
+                            <path d="M3 6h18" />
+                            <path d="M7 12h10" />
+                            <path d="M10 18h4" />
+                        </svg>
+                        Filtros
+                    </button>
+                </div>
+                <button class="btn-add-aula botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-plus">
+                        <path d="M5 12h14" />
+                        <path d="M12 5v14" />
+                    </svg>
+                    Registrar nova aula
+                </button>
+            </div>
+            <div class="lista-aulas-container">
+                <div class="grupo-aulas-dia">
+                    <div class="informacoes-dia">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-calendar">
+                                <path d="M8 2v4" />
+                                <path d="M16 2v4" />
+                                <rect width="18" height="18" x="3" y="4" rx="2" />
+                                <path d="M3 10h18" />
+                            </svg>
+                            24 Novembro 2024
+                        </span>
+                        <div>
+                            Total de aulas<span class="badge">2 aulas</span>
+                        </div>
+                    </div>
+                    <div class="aulas">
+                        <div class="card-aula">
+                            <div class="card-main">
+                                <div class="card-aula-identificacao">
+                                    <span class="id-aula">
+                                        <span></span>
+                                        #4581a1e3
+                                    </span>
+                                    <span class="card-aula-tipo">Individual</span>
+                                </div>
+                                <ul class="card-aula-dados-aula">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        08:00 - 08:30
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Pedro Henrique Silva
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-map-pin">
+                                            <path
+                                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                        Quadra 1
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award">
+                                            <path
+                                                d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                                            <circle cx="12" cy="8" r="6" />
+                                        </svg>
+                                        Iniciante
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-circle-dollar-sign">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                                            <path d="M12 18V6" />
+                                        </svg>
+                                        Fixa
+                                    </li>
+                                </ul>
+                                <button class="ações-aula">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-ellipsis">
+                                        <circle cx="12" cy="12" r="1" />
+                                        <circle cx="19" cy="12" r="1" />
+                                        <circle cx="5" cy="12" r="1" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-footer">
+                                Aluno(s)
+                                <ul class="card-aula-lista-alunos">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Victor Belmont
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Gabriella Stone
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-aula">
+                            <div class="card-main">
+                                <div class="card-aula-identificacao">
+                                    <span class="id-aula">
+                                        <span></span>
+                                        #4581a1e3
+                                    </span>
+                                    <span class="card-aula-tipo">Individual</span>
+                                </div>
+                                <ul class="card-aula-dados-aula">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        08:00 - 08:30
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Pedro Henrique Silva
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-map-pin">
+                                            <path
+                                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                        Quadra 1
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award">
+                                            <path
+                                                d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                                            <circle cx="12" cy="8" r="6" />
+                                        </svg>
+                                        Iniciante
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-circle-dollar-sign">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                                            <path d="M12 18V6" />
+                                        </svg>
+                                        Fixa
+                                    </li>
+                                </ul>
+                                <button class="ações-aula">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-ellipsis">
+                                        <circle cx="12" cy="12" r="1" />
+                                        <circle cx="19" cy="12" r="1" />
+                                        <circle cx="5" cy="12" r="1" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-footer">
+                                Aluno(s)
+                                <ul class="card-aula-lista-alunos">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Olivia Kensington
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Gabriella Stone
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo-aulas-dia">
+                    <div class="informacoes-dia">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-calendar">
+                                <path d="M8 2v4" />
+                                <path d="M16 2v4" />
+                                <rect width="18" height="18" x="3" y="4" rx="2" />
+                                <path d="M3 10h18" />
+                            </svg>
+                            25 Novembro 2024
+                        </span>
+                        <div>
+                            Total de aulas<span class="badge">2 aulas</span>
+                        </div>
+                    </div>
+                    <div class="aulas">
+                        <div class="card-aula">
+                            <div class="card-main">
+                                <div class="card-aula-identificacao">
+                                    <span class="id-aula">
+                                        <span></span>
+                                        #4581a1e3
+                                    </span>
+                                    <span class="card-aula-tipo">Individual</span>
+                                </div>
+                                <ul class="card-aula-dados-aula">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        08:00 - 08:30
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Pedro Henrique Silva
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-map-pin">
+                                            <path
+                                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                        Quadra 1
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award">
+                                            <path
+                                                d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                                            <circle cx="12" cy="8" r="6" />
+                                        </svg>
+                                        Iniciante
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-circle-dollar-sign">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                                            <path d="M12 18V6" />
+                                        </svg>
+                                        Fixa
+                                    </li>
+                                </ul>
+                                <button class="ações-aula">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-ellipsis">
+                                        <circle cx="12" cy="12" r="1" />
+                                        <circle cx="19" cy="12" r="1" />
+                                        <circle cx="5" cy="12" r="1" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-footer">
+                                Aluno(s)
+                                <ul class="card-aula-lista-alunos">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Victor Belmont
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Gabriella Stone
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-aula">
+                            <div class="card-main">
+                                <div class="card-aula-identificacao">
+                                    <span class="id-aula">
+                                        <span></span>
+                                        #4581a1e3
+                                    </span>
+                                    <span class="card-aula-tipo">Individual</span>
+                                </div>
+                                <ul class="card-aula-dados-aula">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        08:00 - 08:30
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Pedro Henrique Silva
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-map-pin">
+                                            <path
+                                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                        Quadra 1
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award">
+                                            <path
+                                                d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                                            <circle cx="12" cy="8" r="6" />
+                                        </svg>
+                                        Iniciante
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-circle-dollar-sign">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                                            <path d="M12 18V6" />
+                                        </svg>
+                                        Fixa
+                                    </li>
+                                </ul>
+                                <button class="ações-aula">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-ellipsis">
+                                        <circle cx="12" cy="12" r="1" />
+                                        <circle cx="19" cy="12" r="1" />
+                                        <circle cx="5" cy="12" r="1" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-footer">
+                                Aluno(s)
+                                <ul class="card-aula-lista-alunos">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Olivia Kensington
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        Gabriella Stone
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 

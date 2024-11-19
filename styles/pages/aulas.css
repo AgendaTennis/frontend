@@ -1,0 +1,243 @@
+#listar-aulas main {
+    margin-top: 32px;
+    padding-bottom: 64px;
+}
+
+#listar-aulas .descricao-pagina {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+#listar-aulas .descricao-pagina h1 {
+    margin-bottom: 4px;
+}
+
+#listar-aulas .acoes-usuarios {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#listar-aulas .acoes-usuarios-filtros {
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    max-width: 500px;
+}
+
+#listar-aulas .acoes-usuarios-filtros .filtros {
+    background-color: transparent;
+    color: var(--cor-texto);
+    max-width: max-content;
+    border: solid 1px var(--cor-borda-padrao);
+    font-size: 14px;
+    font-weight: 600;
+    gap: 4px;
+}
+
+#listar-aulas .btn-add-aula {
+    max-width: 196px;
+}
+
+.buscar-aulas-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 4px 8px;
+    border: solid 1px #d0d5dd;
+    border-radius: 4px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+}
+
+.buscar-aulas-input svg {
+    width: 18px;
+    height: 18px;
+    stroke: #667085;
+}
+
+.buscar-aulas-input input {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+
+.buscar-aulas-input:has(input:focus-within) {
+    border: solid 2px var(--cor-primaria-marca);
+}
+
+#listar-aulas .lista-aulas-container {
+    margin-top: 24px;
+    border-top: solid 1px var(--cor-borda-padrao);
+    padding: 24px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#listar-aulas .grupo-aulas-dia {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+
+}
+
+.grupo-aulas-dia .informacoes-dia {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    color: var(--cor-titulo);
+}
+
+.grupo-aulas-dia .informacoes-dia>span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.grupo-aulas-dia .informacoes-dia>div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.grupo-aulas-dia .informacoes-dia .badge {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 99px;
+    color: var(--cor-primaria-marca);
+    background-color: var(--cor-backgroud-hover);
+}
+
+.aulas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.aulas .card-aula {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
+    border: solid 1px var(--cor-borda-padrao);
+    border-radius: 4px;
+}
+
+
+.aulas .card-aula .card-main {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    width: 100%;
+}
+
+.card-aula-identificacao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-aula-identificacao .id-aula {
+    color: #344054;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-aula-identificacao .id-aula span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--cor-primaria-marca);
+    border-radius: 4px;
+}
+
+.card-aula-tipo {
+    color: var(--cor-titulo);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-aula-dados-aula {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.card-aula-dados-aula li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-aula-dados-aula li svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--cor-primaria-marca);
+}
+
+.card-aula .ações-aula {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    justify-self: end;
+    padding: 6px 12px;
+    color: var(--cor-primaria-marca);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color .3s;
+}
+
+.card-aula .ações-aula:hover {
+    background-color: var(--cor-backgroud-hover);
+}
+
+.card-aula .card-footer {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--cor-text-secundario);
+}
+
+
+.card-footer .card-aula-lista-alunos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-footer .card-aula-lista-alunos li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+
+    border: solid 1px var(--cor-borda-padrao);
+    border-radius: 99px;
+    font-weight: 500;
+}
+
+.card-footer .card-aula-lista-alunos li svg {
+    width: 16px;
+    height: 16px;
+
+}
