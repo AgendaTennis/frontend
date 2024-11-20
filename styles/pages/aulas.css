@@ -149,7 +149,7 @@
 }
 
 .card-aula-identificacao .id-aula {
-    color: #344054;
+    color: var(--cor-text-secundario);
     font-weight: 600;
     display: flex;
     align-items: center;

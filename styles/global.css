@@ -11,6 +11,7 @@
   --cor-titulo: #101828;
   --cor-texto: #475467;
   --cor-text-secundario: #344054;
+  --arrow-select: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>');
 }
 
 * {
@@ -19,6 +20,8 @@
   box-sizing: border-box;
   accent-color: var(--cor-primaria-marca);
   outline-color: var(--cor-primaria-marca);
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor-borda-padrao) transparent;
 }
 
 html,
@@ -39,10 +42,17 @@ img {
   display: block;
 }
 
+select,
 input,
 label {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  color: var(--cor-texto);
+}
+
+a {
+  color: var(--cor-texto);
+  text-decoration: none;
 }
 
 svg {
@@ -54,11 +64,15 @@ ul {
   list-style: none;
 }
 
-.conteiner {
+.container {
   max-width: 1280px;
   padding-left: 32px;
   padding-right: 32px;
   margin: 0 auto;
+}
+
+main.container {
+  padding-bottom: 64px;
 }
 
 .titulo-principal {
@@ -68,7 +82,7 @@ ul {
 
 .titulo-secundario {
   font-size: 18px;
-  color: #333;
+  color: var(--cor-text-secundario);
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -82,6 +96,11 @@ ul {
 .texto-pequeno {
   color: var(--cor-texto);
   font-size: 14px;
+}
+
+.img-logo {
+  min-width: 112px;
+  min-height: 18px;
 }
 
 @media (max-width: 400px) {

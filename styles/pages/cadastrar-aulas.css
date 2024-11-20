@@ -1,0 +1,148 @@
+#nova-aula .form-container {
+    max-width: 546px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#nova-aula h1.titulo-secundario {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.form-adicionar-aula {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.form-adicionar-aula .user-info,
+.form-adicionar-aula .datas-disponiveis,
+.form-adicionar-aula .alunos-participantes {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.data-disponvies-selecionar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.data-disponvies-acoes {
+    display: flex;
+    gap: 10px;
+}
+
+
+.form-field select#datas-aulas {
+    width: min-content;
+}
+
+#nova-aula .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+#nova-aula .alunos-participantes .botao {
+    width: max-content;
+}
+
+.lista-data-disponvies {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+    width: 100%;
+    padding: 4px 0;
+    overflow-x: scroll;
+}
+
+.lista-data-disponvies li {
+    cursor: pointer;
+
+    display: flex;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: solid 1px var(--cor-borda-padrao);
+    transition: all .3s;
+
+}
+
+.lista-data-disponvies li:has(.data-selecionada:checked),
+.lista-data-disponvies li:hover {
+    background-color: var(--cor-primaria-marca);
+
+}
+
+.lista-data-disponvies li:has(.data-selecionada:checked) .card-data-selecionada,
+.lista-data-disponvies li:hover .card-data-selecionada {
+    color: #fff;
+}
+
+.card-data-selecionada {
+    cursor: pointer;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    font-weight: 600;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    text-wrap: nowrap;
+    transition: all .3s;
+    color: #000000;
+}
+
+
+
+
+
+.card-data-selecionada .slots {
+    font-size: 12px;
+}
+
+.lista-data-disponvies .data-selecionada {
+    appearance: none;
+    width: 0;
+    height: 0;
+}
+
+
+
+
+.lista-alunos-participantes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista-alunos-participantes .aluno-participante {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    background-color: var(--cor-backgroud-hover);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+@media (max-width: 560px) {
+
+    .data-disponvies-selecionar .form-group {
+        flex-direction: row;
+    }
+}

@@ -17,8 +17,20 @@
   gap: 12px;
 }
 
+
+.botao.outline {
+  background-color: transparent;
+  border: solid 1px var(--cor-borda-padrao);
+  color: var(--cor-texto);
+  padding: 10px 12px;
+}
+
 .botao:hover {
   background-color: #cf6718;
+}
+
+.botao.outline:hover {
+  background-color: inherit;
 }
 
 .botao#adicionar {
@@ -40,16 +52,34 @@
 .input-padrao {
   width: 100%;
   font-size: 14px;
-  padding: 4px 8px;
+  padding: 10px 14px;
   border: 1px solid #d0d5dd;
   border-radius: 4px;
-  height: 38px;
+}
+
+
+.select-padrao {
+  font-size: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--bg-color);
+  border: 1px solid var(--cor-borda-padrao);
+  padding: 10px 14px;
+  color: var(--cor-texto);
+  cursor: pointer;
+  position: relative;
+  background-image: var(--arrow-select);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  border-radius: 4px;
 }
 
 .input-padrao#data {
   width: 25%;
   font-size: 14px;
-  padding: 4px 8px;
+  padding: 10px 14px;
   border: 1px solid #d0d5dd;
   border-radius: 4px;
   height: 38px;
@@ -57,10 +87,23 @@
 
 .label-padrao {
   color: #475467;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   display: block;
+}
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  gap: 24px;
+  width: 100%;
 }
 
 .header-main {
@@ -91,7 +134,7 @@
 .header-main nav ul a {
   padding: 8px 18px;
   border-radius: 6px;
-  color: #344054;
+  color: var(--cor-text-secundario);
   font-weight: 600;
   display: inline-block;
   text-decoration: none;
@@ -110,12 +153,78 @@
   width: 150px;
 }
 
-@media (max-width: 400px) {
+
+.breadcrumb-container {
+  width: 100%;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  height: max-content;
+  font-size: 14px;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb-item {
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.breadcrumb-item:hover {
+  background-color: var(--cor-backgroud-hover);
+}
+
+.breadcrumb-item a {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item a svg {
+  margin-top: 1px;
+}
+
+.breadcrumb-item:has(a.icon-none) {
+  padding: 8px;
+}
+
+
+
+
+@media (max-width: 560px) {
+
+  .container {
+    padding: 0 8px;
+  }
+
+  .select-padrao,
+  .input-padrao,
+  .label-padrao {
+    font-size: 12px;
+  }
+
+  .header-main nav.container {
+    padding: 0 8px;
+    gap: 8px;
+  }
+
   .input-padrao {
     padding: 12px;
   }
 
   .botao {
     padding: 12px;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .breadcrumb-container {
+    padding-left: 0;
   }
 }

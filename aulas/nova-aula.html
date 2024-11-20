@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/pages/cadastrar-aulas.css">
+    <title>AgendaTennis - Registrar Aula</title>
+</head>
+
+<body id="nova-aula">
+    <header class="header-main">
+        <nav class="container">
+            <a href="#"><img src="../assets/icons/logo.svg" alt="Logo AgendaTennis" class="img-logo"></a>
+            <ul>
+                <li><a href="../usuarios/listar-usuarios.html">Usuários</a></li>
+                <li><a href="./listar-aulas.html" class="ativo">Aulas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="breadcrumb-container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="/aulas/listar-aulas.html" class="text-xs">
+                        Aulas
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-right">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/aulas/nova-aula.html" class="text-xs icon-none">
+                        Registrar nova aula
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="form-container">
+            <h1 class="titulo-secundario">Registrar nova aula</h1>
+            <form class="form-adicionar-aula">
+                <div class="user-info">
+                    <p class="texto-normal">Informações da aula</p>
+                    <div class="form-group">
+                        <div class="form-field">
+                            <label for="professor" class="label-padrao">Professor</label>
+                            <select name="professor" id="professor" class="select-padrao" required>
+                                <option>Selecione um professor</option>
+                                <option value="1">Gabriel Martins Silva</option>
+                                <option value="2">Lucas Oliveira Santos</option>
+                                <option value="3">Thiago Pereira Costa</option>
+                                <option value="4">Rafael Souza Almeida</option>
+                                <option value="4">Bruno Araújo Nascimento</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="nivel" class="label-padrao">Nível</label>
+                            <select name="nivel" id="nivel" class="select-padrao" required>
+                                <option>Selecion o nível do aluno</option>
+                                <option value="1">Iniciante</option>
+                                <option value="2">Intermediário</option>
+                                <option value="3">Avançado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-field">
+                            <label for="quadra" class="label-padrao">Quadra</label>
+                            <select name="quadra" id="quadra" class="select-padrao" required>
+                                <option>Selecione a quadra</option>
+                                <option value="1">Quadra - 1</option>
+                                <option value="2">Quadra - 2</option>
+                                <option value="3">Quadra - 3</option>
+                                <option value="4">Quadra - 4</option>
+                                <option value="5">Quadra - 5</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="tipo" class="label-padrao">Tipo</label>
+                            <select name="tipo" id="tipo" class="select-padrao" required>
+                                <option>Selecione o tipo de aula</option>
+                                <option value="individual">Individual</option>
+                                <option value="dupla">Dupla</option>
+                                <option value="grupo">Grupo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="datas-disponiveis">
+                    <p class="texto-normal">Datas disponíveis para aulas</p>
+                    <div class="data-disponvies-selecionar">
+                        <div class="form-group">
+                            <div class="form-field">
+                                <select name="datas-aulas" id="datas-aulas" class="select-padrao" required>
+                                    <option value="01/2024">Janeiro - 2024</option>
+                                    <option value="02/2024">Fevereiro - 2024</option>
+                                    <option value="03/2024">Março - 2024</option>
+                                    <option value="04/2024">Abril - 2024</option>
+                                    <option value="05/2024">Maio - 2024</option>
+                                    <option value="06/2024">Junho - 2024</option>
+                                    <option value="07/2024">Julho - 2024</option>
+                                    <option value="08/2024">Agosto - 2024</option>
+                                    <option value="09/2024">Setembro - 2024</option>
+                                    <option value="10/2024">Outubro - 2024</option>
+                                    <option value="11/2024">Novembro - 2024</option>
+                                    <option value="12/2024">Dezembro - 2024</option>
+                                </select>
+                            </div>
+                            <div class="data-disponvies-acoes">
+                                <button class="botao outline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-chevron-left">
+                                        <path d="m15 18-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button class="botao outline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-chevron-right">
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="lista-data-disponvies">
+                            <li>
+                                <input type="radio" name="data-selecionada" id="seg-11" class="data-selecionada">
+                                <label for="seg-11" class="card-data-selecionada">
+                                    <span class="dia-semana">Seg</span>
+                                    <span class="dia-mes">11</span>
+                                    <span class="slots">9 slots</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="data-selecionada" id="ter-12" class="data-selecionada">
+                                <label for="ter-12" class="card-data-selecionada">
+                                    <span class="dia-semana">Ter</span>
+                                    <span class="dia-mes">12</span>
+                                    <span class="slots">4 slots</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="data-selecionada" id="qua-13" class="data-selecionada">
+                                <label for="qua-13" class="card-data-selecionada">
+                                    <span class="dia-semana">Qua</span>
+                                    <span class="dia-mes">13</span>
+                                    <span class="slots">2 slots</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="data-selecionada" id="qui-14" class="data-selecionada">
+                                <label for="qui-14" class="card-data-selecionada">
+                                    <span class="dia-semana">Qui</span>
+                                    <span class="dia-mes">14</span>
+                                    <span class="slots">2 slots</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="data-selecionada" id="sex-15" class="data-selecionada">
+                                <label for="sex-15" class="card-data-selecionada">
+                                    <span class="dia-semana">Sex</span>
+                                    <span class="dia-mes">15</span>
+                                    <span class="slots">12 slots</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="data-selecionada" id="sab-16" class="data-selecionada">
+                                <label for="sab-16" class="card-data-selecionada">
+                                    <span class="dia-semana">Sab</span>
+                                    <span class="dia-mes">16</span>
+                                    <span class="slots">6 slots</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-field">
+                            <label for="agendamento" class="label-padrao">Repetir agendamento</label>
+                            <select name="agendamento" id="agendamento" class="select-padrao" required>
+                                <option>Selecione a recorrência do agendamento</option>
+                                <option value="individual">Não se repete</option>
+                                <option value="dupla">Semanalmente toda quarta-feira</option>
+                                <option value="dupla">Mensalmente todo dia 21-01-2024</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="alunos-participantes">
+                    <p class="texto-normal">Aluno(s) que participarão da aula</p>
+                    <div class="form-group">
+                        <input type="search" name="adicionar-aluno" id="adicionar-aluno" class="input-padrao">
+                        <button type="button" class="botao outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-plus">
+                                <path d="M5 12h14" />
+                                <path d="M12 5v14" />
+                            </svg>Adicionar
+                        </button>
+                    </div>
+                    <ul class="lista-alunos-participantes">
+                        <li class="aluno-participante">
+                            Olivia Kensington <svg xmlns=" http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+                                <path d="M18 6 6 18" />
+                                <path d="m6 6 12 12" />
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="botao">Salvar</button>
+                    <button type="button" class="botao outline" id="cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
