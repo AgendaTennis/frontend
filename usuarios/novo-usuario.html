@@ -4,91 +4,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/pages/cadastro.css">
-    <title>AgendaTennis - Registrar usuário</title>
+    <title>AgendaTennis - Registrar Usuário</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 32px;
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-main ul li {
+            margin-left: 20px;
+        }
+
+        .header-main img {
+            height: 32px;
+        }
+
+        .header-main ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 16px;
+        }
+
+        .header-main ul li a {
+            text-decoration: none;
+            color: #475467;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .header-main ul li a:hover {
+            background-color: #f9fafb;
+        }
+
+        .header-main ul li a.ativo {
+            background-color: #f9f5ff;
+            color: #ff7a00;
+            font-weight: 400;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .titulo-principal {
+            font-size: 24px;
+            margin-bottom: 2px;
+            color: #101828;
+            font-weight: 600;
+        }
+
+        .user-type-buttons {
+            display: flex;
+            margin-bottom: 20px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .user-type-buttons div {
+            display: flex;
+            width: 36%;
+            justify-content: space-between;
+        }
+
+        .text {
+            display: flex;
+            width: 36%;
+            text-align: start;
+            flex-direction: column;
+            margin: 60px 0 10px;
+        }
+
+        .botao {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #f1f1f1;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+            font-size: 16px;
+            width: 31%;
+            display: flex;
+            align-items: center;
+            padding: 10px 10px;
+            justify-content: center;
+            font-weight: 400;
+        }
+
+        .botao.ativo {
+            color: #ff7a00;
+            border-color: #ff7a00;
+            font-weight: 400;
+        }
+
+        .form-dinamico {
+            display: none;
+        }
+
+        .form-dinamico.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .form-group {
+            display: flex;
+            width: 36%;
+            justify-content: space-around;
+            gap: 38px;
+        }
+
+        .form-group-input {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .email {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 36%;
+        }
+
+        .email .form-group-input input {
+            width: 97%;
+            padding: 11px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+            font-weight: 400;
+        }
+
+        .texto {
+            display: flex;
+            text-align: start;
+            width: 36%;
+            font-weight: 400;
+        }
+
+        .form-group-input label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .form-group-input input {
+            width: 93%;
+            padding: 11px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+            font-weight: 400;
+        }
+
+        .form-group-input select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+            background-color: #fff;
+            font-weight: 400;
+        }
+
+        .form-actions {
+            display: flex;
+            width: 36%;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .form-actions .salvar,
+        .form-actions .cancelar {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            padding: 10px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-weight: 400;
+        }
+
+        .form-actions .salvar {
+            background: #ff7a00;
+            color: #ffffff;
+            border: 1px solid #ff7a00;
+            margin-right: 10px;
+        }
+
+        .form-actions .salvar:hover {
+            background: #e06b00;
+        }
+
+        .form-actions .cancelar {
+            background: #f1f1f1;
+            color: #555555;
+            border: 1px solid #ddd;
+            margin-left: 10px;
+        }
+
+        .form-actions .cancelar:hover {
+            background: #dddddd;
+        }
+
+        .card {
+            display: flex;
+            text-align: start;
+            width: 35%;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            padding: 12px 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .card div {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card div input {
+            border-radius: 10px;
+        }
+        .p1{
+            margin-bottom: 2px;
+        }
+    </style>
 </head>
 
-<body id="novo-usuario">
+<body>
+    <header>
+        <div class="header-main">
+            <a href="#"><img src="../assets/icons/logo.svg" alt="Logo AgendaTennis"></a>
+            <ul>
+                <li><a href="./listar-usuarios.html" class="ativo">Usuários</a></li>
+                <li><a href="../aulas/listar-aulas.html">Aulas</a></li>
+            </ul>
+        </div>
+    </header>
+
     <div class="container">
-        <!-- Cabeçalho -->
-        <header class="header-main">
-            <nav>
-                <ul>
-                    <li><a href="#"><img src="../assets/icons/logo.svg" alt="Logo AgendaTennis"></a></li>
-                    <li><a href="./listar-usuarios.html" class="ativo">Usuários</a></li>
-                    <li><a href="../aulas/listar-aulas.html">Aulas</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="text">
+            <h1 class="titulo-principal">Registrar novo usuário</h1>
+            <p class="p1">Tipo de usuário</p>
+        </div>
+        <!-- Botões -->
+        <div class="user-type-buttons">
+            <div>
+                <button class="botao ativo" onclick="showForm('form-aluno')">Aluno</button>
+                <button class="botao" onclick="showForm('form-professor')">Professor</button>
+                <button class="botao" onclick="showForm('form-admin')">Administrador</button>
+            </div>
+        </div>
 
-        <!-- Conteúdo Principal -->
-        <main>
-            <section class="form-section">
-                <h1 class="titulo-principal">Registrar novo usuário</h1>
-
-                <!-- Título Tipo de Usuário -->
-                <h2 class="titulo-secundario">Tipo de usuário</h2>
-                <div class="user-type">
-                    <div>
-                        <label for="userType">Aluno</label>
-                        <input type="radio" name="userType" value="Aluno" checked>
-                    </div>
-                    <div>
-                        <label for="userType">Professor</label>
-                        <input type="radio" name="userType" value="Professor">
-                    </div>
-                    <div>
-                        <label class="admin">Administrador</label>
-                        <input type="radio" name="userType" value="Administrador">
-                    </div>
+        <!-- Formulário Aluno -->
+        <form id="form-aluno" class="form-dinamico active">
+            <div class="form-group">
+                <div class="form-group-input">
+                    <label for="nome-aluno">Nome</label>
+                    <input type="text" id="nome-aluno" placeholder="Digite o nome">
                 </div>
+                <div class="form-group-input">
+                    <label for="sobrenome-aluno">Sobrenome</label>
+                    <input type="text" id="sobrenome-aluno" placeholder="Digite o sobrenome">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group-input">
+                    <label for="sexo-aluno">Sexo</label>
+                    <input type="text" id="sexo-aluno" placeholder="Masculino">
+                </div>
+                <div class="form-group-input">
+                    <label for="nascimento-aluno">Data de nascimento</label>
+                    <input type="date" id="nascimento-aluno">
+                </div>
+            </div>
+            <div class="email">
+                <div class="form-group-input">
+                    <label for="email-aluno">Email</label>
+                    <input type="email" id="email-aluno" placeholder="Digite o email">
+                </div>
+            </div>
+            <p class="texto">Informações do aluno</p>
+            <div class="form-group">
+                <div class="form-group-input">
+                    <label for="numero-socio-aluno">Número do sócio</label>
+                    <input type="text" id="numero-socio-aluno" placeholder="Digite o número do sócio">
+                </div>
+                <div class="form-group-input">
+                    <label for="tipo-cobranca-aluno">Tipo de cobrança</label>
+                    <select id="tipo-cobranca-aluno">
+                        <option value="" selected>Selecionar</option>
+                        <option value="Fixo">Fixo</option>
+                        <option value="Anual">Anual</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <label for="primeira-aula-aluno">Primeira Aula</label>
+                    <input type="radio" id="primeira-aula-aluno">
+                </div>
+                <p>Marque esta opção para indicar que o aluno ainda não participou de nenhuma aula e, portanto, tem
+                    direito a uma aula de teste gratuita.</p>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="salvar">Salvar</button>
+                <button type="button" class="cancelar" onclick="cancelForm()">Cancelar</button>
+            </div>
+        </form>
 
-                <!-- Título Informações Pessoais -->
-                <h2 class="titulo-secundario">Informações pessoais</h2>
-                <!-- Formulário de Cadastro -->
-                <form class="register-form">
-                    <div class="form-group">
-                        <div class="form-field">
-                            <label for="nome" class="label-padrao">Nome</label>
-                            <input type="text" id="nome" placeholder="Oliver" class="input-padrao">
-                        </div>
-                        <div class="form-field">
-                            <label for="sobrenome" class="label-padrao">Sobrenome</label>
-                            <input type="text" id="sobrenome" placeholder="Tasty" class="input-padrao">
-                        </div>
-                    </div>
+        <!-- Formulário Professor -->
+        <form id="form-professor" class="form-dinamico">
+            <div class="form-group">
+                <div class="form-group-input">
+                    <label for="nome-professor">Nome</label>
+                    <input type="text" id="nome-professor" placeholder="Digite o nome">
+                </div>
+                <div class="form-group-input">
+                    <label for="sobrenome-professor">Sobrenome</label>
+                    <input type="text" id="sobrenome-professor" placeholder="Digite o sobrenome">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group-input">
+                    <label for="sexo-professor">Sexo</label>
+                    <input type="text" id="sexo-professor" placeholder="Masculino">
+                </div>
+                <div class="form-group-input">
+                    <label for="nascimento-professor">Data de nascimento</label>
+                    <input type="date" id="nascimento-professor">
+                </div>
+            </div>
+            <div class="email">
+                <div class="form-group-input">
+                    <label for="email-professor">Email</label>
+                    <input type="email" id="email-professor" placeholder="Digite o email">
+                </div>
+            </div>
+            <!-- Removido as informações do professor -->
+            <div class="form-actions">
+                <button type="submit" class="salvar">Salvar</button>
+                <button type="button" class="cancelar" onclick="cancelForm()">Cancelar</button>
+            </div>
+        </form>
 
-                    <div class="form-group">
-                        <div class="form-field">
-                            <label for="sexo" class="label-padrao">Sexo</label>
-                            <input type="text" id="sexo" placeholder="Masculino" class="input-padrao">
-                        </div>
-                        <div class="form-field">
-                            <label for="nascimento" class="label-padrao">Data de nascimento</label>
-                            <input type="date" id="nascimento" placeholder="1970-01-01" class="input-padrao">
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <label for="email" class="label-padrao">Email</label>
-                        <input type="email" id="email" placeholder="oliver@acme.com" class="input-padrao">
-                    </div>
-                    <div class="form-field">
-                        <label for="senha" class="label-padrao">Senha</label>
-                        <input type="password" id="senha" placeholder="oliver@acme.com" class="input-padrao">
-                    </div>
-                    <!-- Botões de Ação -->
-                    <div class="form-actions">
-                        <button type="submit" class="botao">Salvar</button>
-                        <button type="button" class="botao" id="cancelar" >Cancelar</button>
-                    </div>
-                </form>
-            </section>
-        </main>
+        <!-- Formulário Administrador -->
+        <form id="form-admin" class="form-dinamico">
+            <div class="form-group">
+                <div class="form-group-input">
+                    <label for="nome-admin">Nome</label>
+                    <input type="text" id="nome-admin" placeholder="Digite o nome">
+                </div>
+                <div class="form-group-input">
+                    <label for="sobrenome-admin">Sobrenome</label>
+                    <input type="text" id="sobrenome-admin" placeholder="Digite o sobrenome">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group-input">
+                    <label for="sexo-admin">Sexo</label>
+                    <input type="text" id="sexo-admin" placeholder="Masculino">
+                </div>
+                <div class="form-group-input">
+                    <label for="nascimento-admin">Data de nascimento</label>
+                    <input type="date" id="nascimento-admin">
+                </div>
+            </div>
+            <div class="email">
+                <div class="form-group-input">
+                    <label for="email-admin">Email</label>
+                    <input type="email" id="email-admin" placeholder="Digite o email">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group-input">
+                    <label for="senha-admin">Senha</label>
+                    <input type="password" id="senha-admin" placeholder="Senha">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="salvar">Salvar</button>
+                <button type="button" class="cancelar" onclick="cancelForm()">Cancelar</button>
+            </div>
+        </form>
     </div>
+
+    <script>
+        function showForm(formId) {
+            document.querySelectorAll('.form-dinamico').forEach(form => {
+                form.classList.remove('active');
+            });
+            document.getElementById(formId).classList.add('active');
+
+            document.querySelectorAll('.user-type-buttons .botao').forEach(button => {
+                button.classList.remove('ativo');
+            });
+            document.querySelector(`.botao[onclick="showForm('${formId}')"]`).classList.add('ativo');
+        }
+
+        function cancelForm() {
+            alert("Formulário cancelado!");
+        }
+    </script>
 </body>
 
 </html>
+
