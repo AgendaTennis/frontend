@@ -10,7 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../styles/index.css">
-    <title>AgendaTennis - Listar usuários</title>
+    <link rel="stylesheet" href="../styles/pages/listar-usuarios.css">
+    <title>AgendaTennis - Listar Usuário</title>
 </head>
 
 <body id="listar-usuarios">
@@ -18,12 +19,236 @@
         <nav class="container">
             <a href="#"><img src="../assets/icons/logo.svg" alt="Logo AgendaTennis" class="img-logo"></a>
             <ul>
-                <li><a href="../usuarios/listar-usuarios.html">Usuários</a></li>
-                <li><a href="./listar-aulas.html" class="ativo">Aulas</a></li>
+                <li><a href="/usuarios/listar-usuarios.html" class="ativo">Usuários</a></li>
+                <li><a href="/aulas/listar-aulas.html">Aulas</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container"></main>
+    <main class="container">
+        <div class="descricao-pagina">
+            <h1 class="titulo-principal">Gerenciamento de usuários</h1>
+            <p class="texto-normal">Gestão de usuários e controle de permissões</p>
+        </div>
+        <div class="table-container">
+            <div class="table-container-header">
+                <p class="texto-normal">Total de usuários <span class="texto-pequeno">6 usuários</span></p>
+                <div class="table-container-actions">
+                    <input class="input-padrao" type="search" name="q" id="q" placeholder="Buscar usuários" />
+                    <a href="/usuarios/novo-usuario.html" class="botao texto-pequeno">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-plus">
+                            <path d="M5 12h14" />
+                            <path d="M12 5v14" />
+                        </svg>
+                        Registrar novo usuário
+                    </a>
+                </div>
+            </div>
+            <div class="table-container-content">
+                <table class="table-default">
+                    <thead class="texto-pequeno">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Status</th>
+                            <th>Perfil</th>
+                            <th>Email</th>
+                            <th>Data de cadastro</th>
+                            <th>Última atualização</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="texto-pequeno">
+                        <tr>
+                            <td>Olivia Rhye</td>
+                            <td><span class="status">Ativo</span></td>
+                            <td>Administrador</td>
+                            <td>olivia@untitledui.com</td>
+                            <td>05/05/202 15:05</td>
+                            <td>05/05/202 15:05</td>
+                            <td>
+                                <button class="table-action-remove table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide-trash-2 lucide">
+                                        <path d="M3 6h18" />
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <a class="table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-pencil">
+                                        <path
+                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                        <path d="m15 5 4 4" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Phoenix Baker</td>
+                            <td><span class="status">Ativo</span></td>
+                            <td>Administrador</td>
+                            <td>phoenix@untitledui.com</td>
+                            <td>05/05/202 15:05</td>
+                            <td>05/05/202 15:05</td>
+                            <td>
+                                <button class="table-action-remove table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide-trash-2 lucide">
+                                        <path d="M3 6h18" />
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <a class="table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-pencil">
+                                        <path
+                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                        <path d="m15 5 4 4" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lana Steiner</td>
+                            <td><span class="status inativo">Inativo</span></td>
+                            <td>Professor</td>
+                            <td>lana@untitledui.com</td>
+                            <td>05/05/202 15:05</td>
+                            <td>05/05/202 15:05</td>
+                            <td>
+                                <button class="table-action-remove table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide-trash-2 lucide">
+                                        <path d="M3 6h18" />
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <a class="table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-pencil">
+                                        <path
+                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                        <path d="m15 5 4 4" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Demi Wilkinson</td>
+                            <td><span class="status">Ativo</span></td>
+                            <td>Aluno</td>
+                            <td>demi@untitledui.com</td>
+                            <td>05/05/202 15:05</td>
+                            <td>05/05/202 15:05</td>
+                            <td>
+                                <button class="table-action-remove table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide-trash-2 lucide">
+                                        <path d="M3 6h18" />
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <a class="table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-pencil">
+                                        <path
+                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                        <path d="m15 5 4 4" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Candice Wu</td>
+                            <td><span class="status">Ativo</span></td>
+                            <td>Aluno</td>
+                            <td>candice@untitledui.com</td>
+                            <td>05/05/202 15:05</td>
+                            <td>05/05/202 15:05</td>
+                            <td>
+                                <button class="table-action-remove table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide-trash-2 lucide">
+                                        <path d="M3 6h18" />
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <a class="table-row-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-pencil">
+                                        <path
+                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                        <path d="m15 5 4 4" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination-container">
+                <div class="texto-pequeno">
+                    Página 1 de 5
+                </div>
+                <div>
+                    <a class="pagination-item texto-pequeno">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide-chevron-left lucide">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                        Anterior
+                    </a>
+                    <a class="pagination-item texto-pequeno">
+                        Próxima
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide-chevron-right lucide">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

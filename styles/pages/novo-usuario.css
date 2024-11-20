@@ -1,0 +1,138 @@
+#novo-usuario .form-container {
+    max-width: 546px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#novo-usuario h1.titulo-secundario {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.form-adicionar-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#novo-usuario .texto-normal.titulo-section-form {
+    color: var(--cor-text-secundario);
+    font-weight: 500;
+}
+
+.user-type-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.user-type-buttons div {
+    display: flex;
+
+    gap: 16px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.user-type-buttons .botao {
+    justify-content: start;
+}
+
+.user-type-buttons .botao.ativo {
+    border-color: var(--cor-primaria-marca);
+    color: var(--cor-primaria-marca);
+}
+
+.informacoes-pessoais {
+    width: 100%;
+}
+
+.informacoes-pessoais,
+.informacoes-aluno {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.checkbox-primeira-aula {
+    padding: 16px;
+    border: solid 2px var(--cor-borda-padrao);
+    border-radius: 8px;
+    position: relative;
+}
+
+.checkbox-primeira-aula .label-padrao {
+    color: var(--cor-text-secundario);
+}
+
+.checkbox-primeira-aula .label-padrao p {
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+.checkbox-primeira-aula input[type=checkbox] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-100%, 100%);
+    border-radius: 50%;
+    appearance: none;
+
+    width: 1.3em;
+    height: 1.3em;
+    cursor: pointer;
+
+    border: 2px solid var(--cor-borda-padrao);
+}
+
+.checkbox-primeira-aula:has(input[type=checkbox]:checked) {
+    border: solid 2px var(--cor-primaria-marca);
+}
+
+.checkbox-primeira-aula input[type=checkbox]:checked {
+    background-color: var(--cor-primaria-marca);
+}
+
+
+.form-dinamico {
+    display: none;
+}
+
+.form-dinamico.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+
+@media (max-width:560px) {
+    .form-dinamico.active {
+        gap: 36px;
+    }
+
+    .user-type-buttons {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .user-type-buttons div {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .checkbox-primeira-aula p {
+        width: 95%;
+    }
+}

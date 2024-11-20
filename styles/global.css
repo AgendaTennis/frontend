@@ -80,6 +80,11 @@ main.container {
   font-size: 24px;
 }
 
+.text-principal-grande {
+  font-size: 28px;
+  font-weight: 600;
+}
+
 .titulo-secundario {
   font-size: 18px;
   color: var(--cor-text-secundario);
